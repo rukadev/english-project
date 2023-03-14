@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <!-- ===== CSS Files ===== -->
+  <link rel="stylesheet" href="/css/map.css">
+  <link rel="stylesheet" href="/css/sections.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<!-- Safari reload -->
+<script>
+  (function () {
+    window.onpageshow = function(event) {
+      if (event.persisted) {
+        window.location.reload();
+      }
+    };
+  })();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMRVR5SEE3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZMRVR5SEE3');
+</script>
+
+<body>
+    <div id="inner"></div>
+    <div class="page-container">
+        <div class="map-container">
+            <div class="map">
+                <span style="--i:0;"></span>
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="container">
+              <div class="card" id="home" style="--name:'Green'; --img:url(/media/images/maps/home/preview.png)">
+                <div class="face face1">
+                    <div class="content">
+                      <i></i>
+                      <h3></h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                      <p>A wooded forest to collect crystals while learning proper traversal.</p>
+                      <a id="play">Play</a>
+                      <a id="view">Home</a>
+                    </div>
+                </div>
+              </div>
+
+              <div class="card" id="about" style="--name:'Desert'; --img:url(/media/images/maps/about/preview.png)">
+                <div class="face face1">
+                    <div class="content">
+                        <i></i>
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                      <p>In this scorching desert, activate the levers to cross the bridge.</p>
+                      <a id="play">Play</a>
+                      <a id="view">About</a>
+                    </div>
+                </div>
+              </div>
+
+              <div class="card" id="service" style="--name:'Ice'; --img:url(/media/images/maps/service/preview.png)">
+                <div class="face face1">
+                    <div class="content">
+                      <i></i>
+                      <h3></h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                      <p>Defeat the enemies blocking your path as you master your attacks.</p>
+                      <a id="play">Play</a>
+                      <a id="view">Interests</a>
+                    </div>
+                </div>
+            </div>
+
+              <div class="card" id="portfolio" style="--name:'Dungeon'; --img:url(/media/images/maps/portfolio/preview.png)"> 
+                <div class="face face1">
+                    <div class="content">
+                        <i></i>
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>A dungeon full of hidden traps, try not to get caught.</p>
+                        <a id="play">Play</a>
+                        <a id="view">Portfolio</a>
+                    </div>
+                </div>
+              </div>
+
+              <div class="card" id="contact" style="--name:'Fire'; --img:url(/media/images/maps/contact/preview.png)">
+                <div class="face face1">
+                    <div class="content">
+                      <i></i>
+                      <h3></h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                      <p>Every game must end in a firey castle, as will this one.</p>
+                      <a id="play">Play</a>
+                      <a id="view">Contact</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="container" class="glass">
+          <span id="left">
+            <h1>Collect crystals and unlock content!</h1>
+          </span>
+
+          <span id="center">
+            <h1>World Map</h1>
+          </span>
+
+          <span id="right">
+            <a href="/html/split.html">Main Menu</a>
+          </span>
+
+        </div>
+    </div>
+
+    <div class="section-container">
+      <section class="home active section" id="homet"></section>
+      <section class="about section" id="aboutt"> </section>
+      <section class="service section" id="servicet"></section>
+      <section class="portfolio section" id="portfoliot"></section>
+      <section class="contact section" id="contactt"></section>
+    </div>
+</body>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+  integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+  integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script src="/js/modules/fade.js"></script>
+<script src="/js/util/storage.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+<script>
+  ['#home', '#about', '#service', '#portfolio', '#contact'].forEach((val, i) => {
+    $(val + 't').load(`/html/sections.html ${val}`, function() {
+      if (i == 4) {
+        var sc = document.createElement('script')
+        sc.src = "/js/scripts/map.js"
+        document.body.append(sc)
+      }
+    })
+  })
+</script>
+
+
+</html>

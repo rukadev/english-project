@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato|Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono');
+
+:root
+{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --skin-color:hwb(103 0% 0% / 0.706);;
+    --purple-brown: #231f20;
+    --egg-shell: #e8e4d2;
+    --dark-peach: hwb(103 0% 0% / 0.706);
+    --border-width: 0.75rem;
+    --dots-gap: 10px;
+}
+
+body.dark 
+{
+    --bg-black-900:#0a192f;
+    --bg-black-100:#0a192f;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body
+{
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+
+/* Page content ------------------------------------------------ */
+.page-container
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #f4b41285;
+}
+
+
+/* Header ------------------------------------------------ */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+#container span {
+    color: white;
+    list-style: none;
+    flex: 0 0 33.3333%;
+}
+
+#container #left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+#container #center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container #center h1 {
+    font-size: 50px;
+}
+
+#container #right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+#container #right a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 50px;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #333;
+    height: 50px;
+}
+
+#container #right a:hover {
+    background-color: green;
+}
+
+.glass {
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+/* Map ------------------------------------------------ */
+.map-container
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.map
+{
+    /* image dimensions */
+    width: 960px;
+    height: 640px;
+    transition: 0.5s;
+    display: flex;
+}
+
+.map span
+{
+    width: 25%;
+    height: 100%;
+    background-size: cover;
+    /* Image width divided by 4, adjusted a bit */
+    display: block;
+    transition: 0.5s;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+.unfold .map span:nth-child(even)
+{
+    transform: skewY(0deg);
+    box-shadow: inset 0px 0 0px rgba(0, 0, 0, 0.5);
+}
+
+.unfold .map span:nth-child(odd)
+{
+    transform: skewY(0deg);
+    box-shadow: inset 0px 0 0px rgba(0, 0, 0, 0.5);
+}
+
+.map span:nth-child(odd)
+{
+    transform: skewY(25deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.map span:nth-child(even)
+{
+    transform: skewY(-25deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.map span:first-child
+{
+    border-left: 5px solid white;
+}
+
+.map span:last-child
+{
+    border-right: 5px solid white;
+}
+
+
+/* Sections ------------------------------------------------ */
+.section
+{
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    visibility: hidden;
+}
+
+.section-container .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 800px;
+    max-width: 1300px;
+    padding: 100px;
+    margin: auto;
+    background-color: #0a192f;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 40px;
+}
+
+.padd-15
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-title
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.exitButton
+{
+    height: 5%;
+    width: 15%;
+    position: fixed;
+    top: 7%;
+    left: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.section-title h2
+{
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title h2::before
+{
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.section-title h2::after
+{
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+.btnn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 1100px;
+    z-index: 5;
+}
+
+.btnn::before {
+    content: 'Close';
+}
+
+.btnn:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.btn
+{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+
+.btn:hover
+{
+    transform: scale(1.05);
+}
+
+.shadow-dark
+{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+
+/* General classes ------------------------------------------------ */
+.hide
+{
+    display: hidden;
+}
+
+.show
+{
+    visibility: visible;
+}
+
+.blur
+{
+    filter: blur(20px);
+}
+
+
+/* Cards ------------------------------------------------ */
+.container{
+    width: 100%;
+}
+
+.container .card{
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card .face.face1 .content{
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content #play:hover{
+    background: #333;
+    color: #fff;
+}
+
+.completed .face2 .content #view:hover {
+    background: #333;
+    color: #fff;
+}
+
+
+/* Card positioning ------------------------------------------------ */
+.container #home {
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    margin-top: -200px;
+    margin-left: -150px;
+    scale: 0.5;
+    transition: transform 0.75s;
+}
+
+.container #about {
+    position: absolute;
+    top: 80%;
+    left: 75%;
+    margin-top: -200px;
+    margin-left: -150px;
+    scale: 0.5;
+    transition: transform 0.75s;
+}
+
+.container #service {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    margin-top: -200px;
+    margin-left: -150px;
+    scale: 0.5;
+    transition: transform 0.75s;
+}
+
+.container #portfolio {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    margin-top: -200px;
+    margin-left: -150px;
+    scale: 0.5;
+    transition: transform 0.75s;
+}
+
+.container #contact {
+    position: absolute;
+    top: 20%;
+    left: 85%;
+    margin-top: -200px;
+    margin-left: -150px;
+    scale: 0.5;
+    transition: transform 0.75s;
+}
+
+
+/* Locked cards ------------------------------------------------ */
+.locked:hover .face1 {
+    background: red;
+}
+
+.locked .face1 {
+    background: #333;
+    box-shadow:0 0 20px black;
+}
+
+.locked .face.face1 .content {
+    opacity: 0.2;
+}
+
+.locked i::before {
+    content: '\f023';
+    font: var(--fa-font-solid);
+    font-size: 125px;
+}
+
+.locked h3::before {
+    content: "Locked";
+}
+
+
+/* Completed cards ------------------------------------------------ */
+.completed .face1 {
+    box-shadow:0 0 20px black;
+    background: var(--img);
+}
+
+.completed:hover {
+    transform: scale(1.5);
+}
+
+.completed:hover .face.face1{
+    transform: translateY(0);
+}
+
+.completed:hover .face.face2{
+    transform: translateY(0);
+}
+
+.completed h3::before {
+    content: var(--name);
+}
+
+
+/* Unlocked cards ------------------------------------------------ */
+.unlocked .face1 {
+    background: green;
+    box-shadow:0 0 20px black;
+    background-size: cover;
+}
+
+
+.unlocked i::before {
+    content: '\f3c1';
+    font: var(--fa-font-solid);
+    font-size: 125px;
+}
+
+.unlocked:hover {
+    transform: scale(1.5);
+}
+
+.unlocked:hover .face.face1{
+    transform: translateY(0);
+    background: var(--img);
+}
+
+.unlocked:hover i {
+    display: none;
+}
+
+.unlocked:hover .face.face2{
+    transform: translateY(0);
+}
+
+.unlocked #view {
+    opacity: 0.2;
+}
+
+.unlocked h3::before {
+    content: "Unlocked";
+}
+
+.unlocked:hover h3::before {
+    content: var(--name);
+}
+
+/* Misc ------------------------------------------------ */
+#inner {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    pointer-events: none;
+}
