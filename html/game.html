@@ -59,24 +59,24 @@
 
 
 <!-- Classes -->
-<script src = '/js/classes/player.js'></script>
-<script src = '/js/classes/boundary.js'></script>
-<script src = '/js/classes/sprite.js'></script>
-<script src = '/js/classes/zone.js'></script>
+<script src = '../js/classes/player.js'></script>
+<script src = '../js/classes/boundary.js'></script>
+<script src = '../js/classes/sprite.js'></script>
+<script src = '../js/classes/zone.js'></script>
 
 <!-- Util -->
-<script src = '/js/util/math.js'></script>
-<script src = '/js/util/table.js'></script>
-<script src="/js/util/storage.js"></script>
+<script src = '../js/util/math.js'></script>
+<script src = '../js/util/table.js'></script>
+<script src="../js/util/storage.js"></script>
 
 
 <!-- Modules -->
-<script src="/js/modules/fps.js"></script>
-<script src="/js/modules/fade.js"></script>
-<script src="/js/modules/image.js"></script>
-<script src="/js/modules/input.js"></script>
-<script src="/js/modules/canvas.js"></script>
-<script src="/js/modules/level.js"></script>
+<script src="../js/modules/fps.js"></script>
+<script src="../js/modules/fade.js"></script>
+<script src="../js/modules/image.js"></script>
+<script src="../js/modules/input.js"></script>
+<script src="../js/modules/canvas.js"></script>
+<script src="../js/modules/level.js"></script>
 
 <script>
 
@@ -84,10 +84,10 @@
   var info = {
     home: {
       js: [
-        '/js/data/zones/home/boundary.js',
-        '/js/data/zones/home/crystal.js',
-        '/js/classes/crystal.js',
-        '/js/scripts/home.js'
+        '../js/data/zones/home/boundary.js',
+        '../js/data/zones/home/crystal.js',
+        '../js/classes/crystal.js',
+        '../js/scripts/home.js'
       ],
 
       keys: {
@@ -98,10 +98,10 @@
       },
 
       images: {
-        background: '/media/images/maps/home/map.png',
-        player: '/media/images/sprites/characters/chara.png',
-        foreground: '/media/images/maps/home/foreground.png',
-        crystal: '/media/images/sprites/crystals/blue-crystal.png'
+        background: '../media/images/maps/home/map.png',
+        player: '../media/images/sprites/characters/chara.png',
+        foreground: '../media/images/maps/home/foreground.png',
+        crystal: '../media/images/sprites/crystals/blue-crystal.png'
       },
 
       title: "Heritage",
@@ -111,25 +111,25 @@
 
     about: {
       js: [
-        '/js/data/zones/about/boundary.js',
-        '/js/data/zones/about/crystal.js',
-        '/js/data/zones/about/bridgeBoundary.js',
-        '/js/data/zones/about/switch1.js',
-        '/js/classes/bridge.js',
-        '/js/classes/lever.js',
-        '/js/classes/crystal.js',
-        '/js/scripts/about.js'
+        '../js/data/zones/about/boundary.js',
+        '../js/data/zones/about/crystal.js',
+        '../js/data/zones/about/bridgeBoundary.js',
+        '../js/data/zones/about/switch1.js',
+        '../js/classes/bridge.js',
+        '../js/classes/lever.js',
+        '../js/classes/crystal.js',
+        '../js/scripts/about.js'
       ],
 
       images: {
-        background: '/media/images/maps/about/map.png',
-        bridge1: '/media/images/maps/about/bridge1.png',
-        bridge2: '/media/images/maps/about/bridge2.png',
-        player: '/media/images/sprites/characters/chara.png',
-        lever1: '/media/images/sprites/switches/switch1.png',
-        lever2: '/media/images/sprites/switches/switch2.png',
-        foreground: '/media/images/maps/about/foreground.png',
-        crystal: '/media/images/sprites/crystals/orange-crystal.png'
+        background: '../media/images/maps/about/map.png',
+        bridge1: '../media/images/maps/about/bridge1.png',
+        bridge2: '../media/images/maps/about/bridge2.png',
+        player: '../media/images/sprites/characters/chara.png',
+        lever1: '../media/images/sprites/switches/switch1.png',
+        lever2: '../media/images/sprites/switches/switch2.png',
+        foreground: '../media/images/maps/about/foreground.png',
+        crystal: '../media/images/sprites/crystals/orange-crystal.png'
       },
 
       keys: {
@@ -147,21 +147,21 @@
 
     portfolio: {
         js: [
-        '/js/data/zones/portfolio/boundary.js',
-        '/js/data/zones/portfolio/crystal.js',
-        '/js/data/zones/portfolio/trap.js',
-        '/js/classes/trap.js',
-        '/js/classes/crystal.js',
-        '/js/scripts/portfolio.js'
+        '../js/data/zones/portfolio/boundary.js',
+        '../js/data/zones/portfolio/crystal.js',
+        '../js/data/zones/portfolio/trap.js',
+        '../js/classes/trap.js',
+        '../js/classes/crystal.js',
+        '../js/scripts/portfolio.js'
       ],
 
       images: {
-        background: '/media/images/maps/portfolio/map.png',
-        foreground: '/media/images/maps/portfolio/map.png',
-        player: '/media/images/sprites/characters/chara.png',
-        crystal: '/media/images/sprites/crystals/blue-crystal.png',
-        sickle: '/media/images/sprites/traps/sickle.png',
-        spike: '/media/images/sprites/traps/spike.png',
+        background: '../media/images/maps/portfolio/map.png',
+        foreground: '../media/images/maps/portfolio/map.png',
+        player: '../media/images/sprites/characters/chara.png',
+        crystal: '../media/images/sprites/crystals/blue-crystal.png',
+        sickle: '../media/images/sprites/traps/sickle.png',
+        spike: '../media/images/sprites/traps/spike.png',
       },
 
       keys: {
@@ -179,30 +179,30 @@
     
     contact: {
         js: [
-        '/js/classes/bridge.js',
-        '/js/classes/enemy.js',
-        '/js/data/zones/contact/boundary.js',
-        '/js/data/zones/contact/sickle.js',
-        '/js/data/zones/contact/crystal.js',
-        '/js/data/zones/contact/enemies.js',
-        '/js/data/zones/contact/switches.js',
-        '/js/data/zones/contact/bridgeBoundary.js',
-        '/js/classes/crystal.js',
-        '/js/classes/lever.js',
-        '/js/scripts/contact.js'
+        '../js/classes/bridge.js',
+        '../js/classes/enemy.js',
+        '../js/data/zones/contact/boundary.js',
+        '../js/data/zones/contact/sickle.js',
+        '../js/data/zones/contact/crystal.js',
+        '../js/data/zones/contact/enemies.js',
+        '../js/data/zones/contact/switches.js',
+        '../js/data/zones/contact/bridgeBoundary.js',
+        '../js/classes/crystal.js',
+        '../js/classes/lever.js',
+        '../js/scripts/contact.js'
       ],
 
       images: {
-        background: '/media/images/maps/contact/map.png',
-        foreground: '/media/images/maps/contact/map.png',
-        player: '/media/images/sprites/characters/chara.png',
-        crystal: '/media/images/sprites/crystals/green-crystal.png',
-        attackPlayer: '/media/images/sprites/characters/attacksheet.png',
-        lever1: '/media/images/sprites/switches/switch1.png',
-        bridge1: '/media/images/maps/contact/bridge1.png',
-        bridge2: '/media/images/maps/contact/bridge2.png',
-        fireSkeleton: '/media/images/sprites/enemies/fire-skeleton.png',
-        bull: '/media/images/sprites/enemies/bull.png',
+        background: '../media/images/maps/contact/map.png',
+        foreground: '../media/images/maps/contact/map.png',
+        player: '../media/images/sprites/characters/chara.png',
+        crystal: '../media/images/sprites/crystals/green-crystal.png',
+        attackPlayer: '../media/images/sprites/characters/attacksheet.png',
+        lever1: '../media/images/sprites/switches/switch1.png',
+        bridge1: '../media/images/maps/contact/bridge1.png',
+        bridge2: '../media/images/maps/contact/bridge2.png',
+        fireSkeleton: '../media/images/sprites/enemies/fire-skeleton.png',
+        bull: '../media/images/sprites/enemies/bull.png',
       },
 
       keys: {
@@ -250,8 +250,8 @@
     parent.append(aligned)
 
     var img = document.createElement('img')
-    img.src = '/media/images/keys/a.png'
-    img.src = '/media/images/keys/' + key + '.png'
+    img.src = '../media/images/keys/a.png'
+    img.src = '../media/images/keys/' + key + '.png'
 
     var span = document.createElement('span')
     span.textContent = value

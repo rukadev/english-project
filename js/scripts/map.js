@@ -141,7 +141,7 @@ function start() {
     var name = n ? n : 'empty'
 
     mapSpans.forEach(span => {
-        span.style.background = "url(/media/images/maps/overworld/" + name + ".png)"
+        span.style.background = "url(../media/images/maps/overworld/" + name + ".png)"
         span.style['background-position'] =  "calc(-235px * var(--i))"
     })
 
