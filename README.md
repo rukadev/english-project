@@ -15,7 +15,9 @@ Negative:
 
 Level ideas:
     Heritage
+        
     Landscape/arrival
+        show that he views it as a "journey"
     Wounds/City
     Duel
 

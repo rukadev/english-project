@@ -19,16 +19,6 @@
   })();
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMRVR5SEE3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZMRVR5SEE3');
-</script>
-
 <body>
     <div id="outer">
         <div id="inner"></div>
@@ -47,7 +37,8 @@
 
   <div class="header">
       <h1></h1>
-      <h3></h3>
+      <h3 id="quote"></h3>
+      <h3 id="obj"></h3>
   </div>
 </body>
 
@@ -113,8 +104,9 @@
         crystal: '/media/images/sprites/crystals/blue-crystal.png'
       },
 
-      title: "Green Village",
-      description: "Use 'WASD' to traverse the map and collect crystals.",
+      title: "Heritage",
+      description: "Goal: Collect all the crystals",
+      quote: "Quote: 'In the conflict between his two different family backgrounds, Juan Dahlmann-perhaps influenced by his Germanic blood-chose the side of that romantic forebear, the one with the romantic death.'"
     },
 
     about: {
@@ -127,7 +119,6 @@
         '/js/classes/lever.js',
         '/js/classes/crystal.js',
         '/js/scripts/about.js'
-        
       ],
 
       images: {
@@ -149,41 +140,9 @@
         e: "Activate"
       },
 
-      title: "Desert Village",
+      title: "Arrival",
+      quote: "He saw horsemen on dirt roads. He saw ditches and ponds and ranches. He saw long, luminous clouds that looked like marble. And all these things were random, like prairie dreams.'",
       description: "Activate the green switches with 'E' to build bridges.",
-    },
-
-    service: {
-        js: [
-        '/js/data/zones/service/boundary.js',
-        '/js/data/zones/service/crystal.js',
-        '/js/data/zones/service/enemy.js',
-        '/js/classes/enemy.js',
-        '/js/classes/crystal.js',
-        '/js/scripts/service.js'
-      ],
-      
-
-      images: {
-        background: '/media/images/maps/service/map.png',
-        player: '/media/images/sprites/characters/chara.png',
-        foreground: '/media/images/maps/service/foreground.png',
-        crystal: '/media/images/sprites/crystals/pink-crystal.png',
-        attackPlayer: '/media/images/sprites/characters/attacksheet.png',
-        scorpion: '/media/images/sprites/enemies/scorpion.png',
-        skeleton: '/media/images/sprites/enemies/skeleton.png'
-      },
-
-      keys: {
-        w: "Up",
-        a: "Left",
-        s: "Down",
-        d: "Right",
-        f: "Attack"
-      },
-
-      title: "Ice Village",
-      description: "Attack the enemies with 'F' to reach the crystal.",
     },
 
     portfolio: {
@@ -212,7 +171,8 @@
         d: "Right",
       },
 
-      title: "Dungeon Village",
+      title: "Obstacle",
+      quote: "Dahlmann undertook the walk as a small adventure.'",
       description: "Avoid the spinning obstacles to reach the crystal.",
     },
 
@@ -254,7 +214,8 @@
         f: "Attack"
       },
 
-      title: "Fire Village",
+      title: "Duel",
+      quote: "'Dahlmann is firmly clutching the knife, which perhaps he will not know how to wield, and he sallies onto the prairie.'",
       description: "Put everything together to complete the course.",
     },
   }
@@ -273,8 +234,10 @@
   var spans = document.querySelectorAll('.aligned span')
   var images = document.querySelectorAll('.aligned img')
   var title = document.querySelector('.header h1')
-  var desc = document.querySelector('.header h3')
+  var quote = document.querySelector('.header #obj')
+  var desc = document.querySelector('.header #quote')
 
+  quote.textContent = info[gameName].quote
   title.textContent = info[gameName].title
   desc.textContent = info[gameName].description
 

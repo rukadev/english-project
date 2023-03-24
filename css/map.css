@@ -54,7 +54,7 @@ body
     width: 100%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #f4b41285;
+    background-color: #17181c;
 }
 
 
@@ -450,16 +450,6 @@ body
     position: absolute;
     top: 80%;
     left: 75%;
-    margin-top: -200px;
-    margin-left: -150px;
-    scale: 0.5;
-    transition: transform 0.75s;
-}
-
-.container #service {
-    position: absolute;
-    top: 15%;
-    left: 40%;
     margin-top: -200px;
     margin-left: -150px;
     scale: 0.5;

@@ -1,4 +1,72 @@
 
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+.main {
+  display: block;
+  box-sizing: border-box;
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  max-width: 60em;
+}
+
+h2 {
+  text-align: center;
+}
+
+.main > div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1em;
+}
+
+article {
+  flex: 1 0 10em;
+  margin: 0.5em 1em;
+  padding: 1em;
+}
+
+article:hover > i{
+    transform: scale(1.2);
+    transform-origin: 50% 0;
+}
+
+article.block a {
+  display: block;
+  padding: 1em;
+/*   border: 1px dotted #0f0; */
+}
+
+article.after {
+  position: relative;
+}
+
+article.after a[href]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+article.box {
+  border: .05em solid rgba(0,0,0,.1);
+  border-radius: 1em;
+  padding: 1em;
+  background-color: rgba(255,255,255,.2);
+/*   box-shadow: 0 .05em .25em rgba(0,0,0,.5); */
+}
+
+article.block.box, article.block {
+  padding: 0;
+}
+
+
+
 .raise:hover, .raise:focus {
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     transform: translateY(-0.25em);
@@ -16,11 +84,9 @@ button {
 button:hover, button:focus {
     border-color: var(--hover);
     color: #fff;
-}
-
-body:hover {
     cursor: pointer;
 }
+
 
 body {
     color: #fff;
@@ -39,7 +105,7 @@ button {
     border: 2px solid;
     font: inherit;
     line-height: 1;
-    margin: 0.5em;
+    margin: 3em;
     padding: 1em 2em;
 }
 
@@ -47,7 +113,12 @@ h1 {
     font-weight: 400;
 }
 
-code {
+yellow {
     color: #e4cb58;
+    font: inherit;
+}
+
+purple {
+    color: purple;
     font: inherit;
 }
