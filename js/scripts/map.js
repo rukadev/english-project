@@ -70,7 +70,7 @@ function addGameBtn(region) {
     gameBtn.addEventListener('click', function() { 
         fade.out(1.5, function() {
             sessionStorage.setItem('GameName', region.id)
-            window.location.href = '../html/game.html'
+            window.location.href = 'game.html'
         })
     })
 }
