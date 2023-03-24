@@ -146,10 +146,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
 <script>
   ['#home', '#about', '#service', '#portfolio', '#contact'].forEach((val, i) => {
-    $(val + 't').load(`/html/sections.html ${val}`, function() {
+    $(val + 't').load(`sections.html ${val}`, function() {
       if (i == 4) {
         var sc = document.createElement('script')
-        sc.src = "/js/scripts/map.js"
+        sc.src = "../js/scripts/map.js"
         document.body.append(sc)
       }
     })
